@@ -1,0 +1,40 @@
+feed.innerHTML += `
+<div class="post-card">
+
+    <div class="post-header">
+        <img src="https://i.pravatar.cc/50" class="avatar">
+        <div>
+            <h3>${post.user.username}</h3>
+            <span class="post-time">Just Now</span>
+        </div>
+    </div>
+
+    <div class="post-content">
+        <p>${post.content}</p>
+    </div>
+
+    <div class="post-actions">
+        <button class="like-btn" onclick="likePost('${post._id}')">
+            ❤️ ${post.likes.length}
+        </button>
+
+        <button class="share-btn">
+            🔄 Share
+        </button>
+    </div>
+
+    <div class="comment-section">
+        <input
+            type="text"
+            id="comment-${post._id}"
+            placeholder="Write a comment...">
+
+        <button
+            class="comment-btn"
+            onclick="addComment('${post._id}')">
+            Post
+        </button>
+    </div>
+
+</div>
+`;

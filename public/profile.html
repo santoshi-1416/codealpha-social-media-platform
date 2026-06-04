@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Social Platform</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="profile-container">
+
+<h1>Social Media Platform</h1>
+
+<button onclick="logout()">Logout</button>
+
+<div class="create-post">
+
+<textarea
+id="postContent"
+placeholder="What's on your mind?">
+</textarea>
+
+<button onclick="createPost()">
+Create Post
+</button>
+
+</div>
+
+<div id="feed"></div>
+
+</div>
+
+<script src="js/posts.js"></script>
+
+<script>
+function logout(){
+ localStorage.removeItem("token");
+ window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
